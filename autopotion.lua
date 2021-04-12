@@ -2,7 +2,7 @@
     Script Name:        Auto Potion
     Description:        Auto use potions
     Original Author:    Ascer
-	Final Author: 		dzFEOO
+    Final Author: 	dzFEOO
 	
 ]]
 
@@ -27,22 +27,22 @@ local action = split[1]
 		if Self.ManaPercent() <= manaBELOW then
 		Self.UseItemWithMe(potMANA, math.random(potDELAY[1], potDELAY[2]))
 		end
-	
+	end
 	else if  action == "life" then
 	
 		function onHealthChange()
 		if Self.HealthPercent() <= healthBELOW then
 		Self.UseItemWithMe(potSPIRIT, math.random(potDELAY[1], potDELAY[2]))
 		end
-	
+	end
 	else if  action == "spirit" then
 	
 		function onManaChange()
 		if Self.ManaPercent() <= manaBELOW then
 		Self.UseItemWithMe(potMANA, math.random(potDELAY[1], potDELAY[2]))
 		end
-	
-end
+	end
+
 	
 autopot:separator(" ") 
 autopot:register()
